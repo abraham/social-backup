@@ -96,3 +96,10 @@ class GitHub:
         items = self._getItems()
         self._totalItems += len(items)
         return items
+
+    def reset(self):
+        """Reset counters to start anew."""
+        self._totalItems = 0
+        self._next_link = None
+        self._maxErrors = 5
+        self._totalErrors = 0

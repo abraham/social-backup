@@ -59,9 +59,11 @@ while True:
             print 'fetched and saved', services[service].getTotalItems(), service, \
                 'items of', config.get('paginationLimit')
 
+        services[service].reset()
+
     print 'Finished saving items', totalItems, 'to', storages.keys()
 
     print '===================='
     print 'sleeping for', config.get('sleep'), 'minutes'
 
-    time.sleep(int(config.get('sleep')) * 60)
+    time.sleep(int(config.get('sleep')) * 1)

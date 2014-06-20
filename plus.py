@@ -88,3 +88,10 @@ class Plus:
             return None
         else:
             return items
+
+    def reset(self):
+        """Reset counters to start anew."""
+        self._totalItems = 0
+        self._nextPageToken = None
+        self._maxErrors = 5
+        self._totalErrors = 0
