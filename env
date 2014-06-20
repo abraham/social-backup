@@ -1,0 +1,10 @@
+export CONFIG_FILE_NAME=config.json
+
+export BACKUP_plus_developerKey=
+
+export BACKUP_twitter_consumerSecret=
+export BACKUP_twitter_accessTokenSecret=
+
+export BACKUP_github_clientSecret=
+
+export BACKUP_mongo_connection=
