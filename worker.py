@@ -33,7 +33,7 @@ if 'mongo' in config.get('enabledStorages'):
     storages['mongo'] = Mongo(**config.get('mongo'))
 
 
-while(True):
+while True:
     """Craw for stuffs."""
     totalItems = 0
 
