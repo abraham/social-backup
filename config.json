@@ -1,6 +1,6 @@
 {
-    "enabledServices": [],
-    "enabledStorages": [],
+    "enabledServices": ["twitter", "github", "plus"],
+    "enabledStorages": ["mongo"],
     "sleep": 5,
 
     "paginationLimit": 200,
