@@ -66,4 +66,4 @@ while True:
     print '===================='
     print 'sleeping for', config.get('sleep'), 'minutes'
 
-    time.sleep(int(config.get('sleep')) * 1)
+    time.sleep(int(config.get('sleep')) * 60)
