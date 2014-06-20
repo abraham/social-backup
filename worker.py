@@ -33,7 +33,7 @@ if 'mongo' in config.get('enabledStorages'):
     storages['mongo'] = Mongo(**config.get('mongo'))
 
 
-def crawl():
+while(True):
     """Craw for stuffs."""
     totalItems = 0
 
@@ -60,9 +60,8 @@ def crawl():
                 'items of', config.get('paginationLimit')
 
     print 'Finished saving items', totalItems, 'to', storages.keys()
+
     print '===================='
     print 'sleeping for', config.get('sleep'), 'minutes'
-    time.sleep(int(config.get('sleep')) * 1000)
-    crawl()
 
-crawl()
+    time.sleep(int(config.get('sleep')) * 1000)
