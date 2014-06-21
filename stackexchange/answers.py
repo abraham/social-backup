@@ -89,6 +89,7 @@ class Answers:
     def reset(self):
         """Reset counters to start anew."""
         self._totalItems = 0
-        self._next_link = None
+        self._page = 1
+        self._has_more = True
         self._maxErrors = 5
         self._totalErrors = 0
