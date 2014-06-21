@@ -3,10 +3,17 @@
 
 import os
 import time
+
+
 from config import Config
+
+
 from plus import Plus
 from tweet import Tweet as Twitter
 from github import GitHub
+from stackexchange.answers import Answers as StackExchangeAnswers
+
+
 from terminal import Terminal
 from disk import Disk
 from mongo import Mongo
@@ -23,6 +30,8 @@ if 'twitter' in config.get('enabledServices'):
     services['twitter'] = Twitter(**config.get('twitter'))
 if 'github' in config.get('enabledServices'):
     services['github'] = GitHub(**config.get('github'))
+if 'stackexchange:answers' in config.get('enabledServices'):
+    services['stackexchange:answers'] = StackExchangeAnswers(**config.get('stackexchange'))
 
 
 if 'terminal' in config.get('enabledStorages'):
@@ -34,7 +43,7 @@ if 'mongo' in config.get('enabledStorages'):
 
 
 while True:
-    """Craw for stuffs."""
+    """Crawl for stuffs."""
     totalItems = 0
 
     print 'starting saving', config.get('paginationLimit'), 'items from', \
