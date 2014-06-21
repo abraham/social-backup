@@ -7,4 +7,7 @@ export BACKUP_twitter_accessTokenSecret=
 
 export BACKUP_github_clientSecret=
 
+export BACKUP_stackexchange_key=
+export BACKUP_stackexchange_accessToken=
+
 export BACKUP_mongo_connection=
