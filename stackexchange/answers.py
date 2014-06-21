@@ -54,7 +54,6 @@ class Answers:
 
         self._page += 1
         self._has_more = response.json()['has_more']
-        print response.json()['has_more']
         return response.json()['items']
 
     def mutateItem(self, item):
