@@ -1,5 +1,5 @@
 {
-    "enabledServices": ["twitter", "github", "plus"],
+    "enabledServices": ["plus", "twitter", "github", "stackexchange:answers"],
     "enabledStorages": ["mongo"],
     "sleep": 5,
 
@@ -9,21 +9,27 @@
 
     "plus": {
         "userId": "114233674199568482864",
-        "developerKey": "env"
+        "developerKey": null
     },
 
     "twitter": {
         "userId": "9436992",
         "consumerKey": "9QR94sYuXI3j6XkYrr1Ybw",
-        "consumerSecret": "env",
+        "consumerSecret": null,
         "accessTokenKey": "9436992-dcYd2JcOjKjOukUBv34006Xo79TN0i0goG3htzr4uy",
-        "accessTokenSecret": "env"
+        "accessTokenSecret": null
     },
 
     "github": {
         "userId": "3341",
         "clientId": "cc15c506565391a03b15",
-        "clientSecret": "env"
+        "clientSecret": null
+    },
+
+    "stackexchange": {
+        "key": null,
+        "accessToken": null,
+        "site": "stackoverflow.com"
     },
 
     "terminal": {
