@@ -98,8 +98,6 @@ class Liked:
 
     def getTotalItems(self):
         """Get the total number of Google+ activities fetched."""
-        if self._totalItems > self._max_count:
-            return self._totalItems * 10
         return self._totalItems
 
     def getItems(self):
