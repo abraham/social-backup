@@ -13,7 +13,7 @@ def _import_non_local(name, custom_name=None):
     return module
 
 
-_import_non_local('instagram', 'instagram_api')
+instagram_api = _import_non_local('instagram', 'instagram_api')
 from instagram_api.bind import InstagramAPIError
 from instagram_api.client import InstagramAPI as api
 import copy
