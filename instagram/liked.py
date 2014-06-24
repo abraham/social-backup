@@ -66,11 +66,11 @@ class Liked:
                                                                    count=self._count,
                                                                    with_next_url=self._next)
         except:
-            if totalErrors < maxErrors:
-                remainingErrors = maxErrors - totalErrors
+            if self._totalErrors < self._maxErrors:
+                remainingErrors = self._maxErrors - self._totalErrors
                 print e
                 print 'Encountered error, will retry', remainingErrors, 'times'
-                totalErrors += 1
+                self._totalErrors += 1
                 return self._getItems()
             else:
                 print 'Encountered to many errors'
