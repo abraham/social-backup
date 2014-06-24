@@ -1,5 +1,5 @@
 {
-    "enabledServices": ["plus", "twitter", "github", "stackexchange:answers"],
+    "enabledServices": ["plus", "twitter", "github", "stackexchange:answers", "instagram:liked"],
     "enabledStorages": ["mongo"],
     "sleep": 5,
 
@@ -30,6 +30,13 @@
         "key": null,
         "accessToken": null,
         "site": "stackoverflow.com"
+    },
+
+    "instagram": {
+        "clientId": null,
+        "clientSecret": null,
+        "userId": "9631155",
+        "accessToken": null
     },
 
     "terminal": {

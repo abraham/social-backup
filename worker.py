@@ -12,6 +12,7 @@ from plus import Plus
 from tweet import Tweet as Twitter
 from github import GitHub
 from stackexchange.answers import Answers as StackExchangeAnswers
+from instagram.liked import Liked as InstagramLiked
 
 
 from terminal import Terminal
@@ -32,6 +33,8 @@ if 'github' in config.get('enabledServices'):
     services['github'] = GitHub(**config.get('github'))
 if 'stackexchange:answers' in config.get('enabledServices'):
     services['stackexchange:answers'] = StackExchangeAnswers(**config.get('stackexchange'))
+if 'instagram:liked' in config.get('enabledServices'):
+    services['instagram:liked'] = InstagramLiked(**config.get('instagram'))
 
 
 if 'terminal' in config.get('enabledStorages'):
