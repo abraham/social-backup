@@ -1,19 +1,21 @@
 """Fetch media like on Instagram."""
 
+
 def _import_non_local(name, custom_name=None):
+    """Monkeypatch around current module importing module of same name."""
     import imp
     import sys
 
     custom_name = custom_name or name
-
-    f, pathname, desc = imp.find_module(name, sys.path[1:])
+    path = sys.path[1:]
+    path.remove('/app')
+    f, pathname, desc = imp.find_module(name, path)
     module = imp.load_module(custom_name, f, pathname, desc)
-    # f.close()
 
     return module
 
 
-instagram_api = _import_non_local('instagram', 'instagram_api')
+_import_non_local('instagram', 'instagram_api')
 from instagram_api.bind import InstagramAPIError
 from instagram_api.client import InstagramAPI as api
 import copy
